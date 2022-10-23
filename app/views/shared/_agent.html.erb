@@ -1,0 +1,17 @@
+<h2>Agents</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agents && @agents.each do |agent| %>
+      <tr>
+        <td><%= link_to agent.name, agent %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

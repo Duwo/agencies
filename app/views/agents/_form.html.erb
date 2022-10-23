@@ -1,0 +1,77 @@
+<%= form_with(model: agent) do |form| %>
+  <% if agent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agent.errors.count, "error") %> prohibited this agent from being saved:</h2>
+
+      <ul>
+        <% agent.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :premium %>
+    <%= form.check_box :premium %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seller_favorite %>
+    <%= form.check_box :seller_favorite %>
+  </div>
+
+  <div class="field">
+    <%= form.label :registered %>
+    <%= form.check_box :registered %>
+  </div>
+
+  <div class="field">
+    <%= form.label :registered_on %>
+    <%= form.date_select :registered_on %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unregistered_on %>
+    <%= form.date_select :unregistered_on %>
+  </div>
+
+  <div class="field">
+    <%= form.label :profile_pageviews %>
+    <%= form.number_field :profile_pageviews %>
+  </div>
+
+  <div class="field">
+    <%= form.label :overall_rating %>
+    <%= form.number_field :overall_rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :review_count %>
+    <%= form.number_field :review_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recommendation_count %>
+    <%= form.number_field :recommendation_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

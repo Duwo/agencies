@@ -1,0 +1,4 @@
+<h1><%= @agency.name %></h1>
+<% if @agency.agents %>
+  <%= render :partial => "shared/agent"%>
+<% end %>
